@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
             "{help h usage ? |      | print this message   }"
             "{@size          |  1   | exercises value     }"
             "{@input_image   |      | input image   }"
-            "{@output_image  |      | output image }":
+            "{@output_image  |      | output image }";
 
     cv::CommandLineParser parser(argc, argv, arguments);
     if (parser.has("help")) {
@@ -44,8 +44,11 @@ int main(int argc, char **argv) {
 
     namedWindow("Output Image", cv::WINDOW_AUTOSIZE);
     imshow("Output Image", output);
-
     cv::imwrite(output_path, output);
+
+    cv::Mat expected_output = input.clone();
+    cv::morphologyEx(input, expected_output, cv::MORPH_CLOSE, kernel);
+    cv::imwrite("./data/letter_closing_opencv.png", expected_output);
 
     cv::waitKey(0);
 

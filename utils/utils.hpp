@@ -8,10 +8,13 @@ class Utils {
 
         for (int i = 0; i < image.rows; ++i) {
             for (int j = 0; j < image.cols; ++j) {
+                // std::cout << "(" << i << ", " << j << ") | Original: ";
+                // std::cout << (int) outputImage.at<uchar>(i, j) << " | Modified: ";
                 int max = getMaxMin(image, kernel, cv::Point(i, j)).first;
                 
                 // Check value is valid
                 if (max <= 255) {
+                    // std::cout << max << "\n";
                     outputImage.at<uchar>(i, j) = max;
                 }
             }
@@ -38,16 +41,16 @@ class Utils {
     }
 
     static cv::Mat opening(cv::Mat image, cv::Mat kernel) {
-        cv::Mat dilated_image = dilate(image, kernel);
-        cv::Mat erosed_image = erose(dilated_image, kernel);
-        return erosed_image;
+        cv::Mat eroded_image = erode(image, kernel);
+        cv::Mat dilated_image = dilate(eroded_image, kernel);
+        return dilated_image;
     }
 
     static cv::Mat closing(cv::Mat image, cv::Mat kernel) {
-        cv::Mat erosed_image = erose(image, kernel);
-        cv::Mat dilated_image = dilate(erosed_image, kernel);
-        return dilated_image;
-    }
+        cv::Mat dilated_image = dilate(image, kernel);
+        cv::Mat eroded_image = erode(dilated_image, kernel);
+        return eroded_image;
+    }    
 
     private:
 
@@ -70,15 +73,15 @@ class Utils {
             int imageX = origin.x + i;
 
             // Check if kernel x is inside image
-            if (imageX < image.rows) {
+            if (imageX >= 0 && imageX < image.rows) {
                 for (int j = -height; j <= height - oneCellHeight; ++j) {
                     // std::cout << "(" << i << ", " << j << ")";
                     int imageY = origin.y + j;
 
                     // Check if kernel y is inside image
-                    if (imageY < image.cols) {
+                    if (imageY >= 0 && imageY < image.cols) {
                         int outputPixel = (int) image.at<uchar>(imageX, imageY);
-
+//                        std::cout << "(" << imageX << ", " << imageY << ") =>" << outputPixel;
                         // Calculate max
                         if (outputPixel > max) {
                             max = outputPixel;
