@@ -1,0 +1,6 @@
+1: Filter 3 - ClosingOpening
+2: Filter 4 - OpeningClosing
+
+----
+
+Note: If we choose a structuring element of 1 we would have better results.
