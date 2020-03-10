@@ -599,3 +599,7 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/cmake,clion,windows,clion+iml,clion+all,visualstudio,visualstudiocode
+
+## Custom
+.vscode
+build/*
