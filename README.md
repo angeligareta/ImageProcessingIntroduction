@@ -8,12 +8,12 @@
 
 ## Introduction
 The excercises developed in the area of image processing are the following:
-- Image thresholding: thresholds an input image given a value. (Excercise  [2a](src/exercise_02a_thresh.cpp))
-- Image comparision: compare two input PGM images and output '=' or '!='. (Excercise  [2b](src/exercise_02b_compare.cpp))
-- Image supremum and infimum operation given two input PGM images. (Excercises [2d_inf](exercise_02d_inf.cpp) and [2d_sup](exercise_02d_sup.cpp))
-- Morphological erosion and dilation given a size 'i' over the input image [assuming 8-connectivity]. (Excercises [3a](src/exercise_03a_erosion.cpp) and [3b](src/exercise_03b_dilation.cpp))
-- Morphological opening and closing given a size 'i' over the input image [assuming 8-connectivity]. (Excercises [4a](src/exercise_04a_opening.cpp) and [4b](src/exercise_04b_closing.cpp))
-- Closing-opening and Opening-closing alternaed filter given a size 'i' over the input image [assuming 8-connectivity]. (Excercises [6a](src/exercise_06a_closing_opening.cpp) and [6b](src/exercise_06b_opening_closing.cpp))
+- Image thresholding: thresholds an input image given a value. (Exercise  [2a](src/exercise_02a_thresh.cpp))
+- Image comparision: compare two input PGM images and output '=' or '!='. (Exercise  [2b](src/exercise_02b_compare.cpp))
+- Image supremum and infimum operation given two input PGM images. (Exercises [2d_inf](exercise_02d_inf.cpp) and [2d_sup](exercise_02d_sup.cpp))
+- Morphological erosion and dilation given a size 'i' over the input image [assuming 8-connectivity]. (Exercises [3a](src/exercise_03a_erosion.cpp) and [3b](src/exercise_03b_dilation.cpp))
+- Morphological opening and closing given a size 'i' over the input image [assuming 8-connectivity]. (Exercises [4a](src/exercise_04a_opening.cpp) and [4b](src/exercise_04b_closing.cpp))
+- Closing-opening and Opening-closing alternaed filter given a size 'i' over the input image [assuming 8-connectivity]. (Exercises [6a](src/exercise_06a_closing_opening.cpp) and [6b](src/exercise_06b_opening_closing.cpp))
 
 ## Environment
 This exercises have been developed in the following environment:
