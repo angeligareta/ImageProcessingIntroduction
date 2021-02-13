@@ -7,7 +7,7 @@
 </p>
 
 ## Introduction
-The excercises developed in the area of image processing are the following:
+The exercises developed in the area of image processing are the following:
 - Image thresholding: thresholds an input image given a value. (Exercise  [2a](src/exercise_02a_thresh.cpp))
 - Image comparision: compare two input PGM images and output '=' or '!='. (Exercise  [2b](src/exercise_02b_compare.cpp))
 - Image supremum and infimum operation given two input PGM images. (Exercises [2d_inf](exercise_02d_inf.cpp) and [2d_sup](exercise_02d_sup.cpp))
